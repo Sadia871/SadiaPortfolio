@@ -48,13 +48,15 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            padding-left:0.2rem;
+            padding-right: 5rem;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #374151;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -106,10 +108,39 @@
         .hero-content {
             z-index: 2;
             animation: fadeInUp 1s ease;
-        }
+                      }
+        ///chatgpt cotntent//
+        .hero {
+  position: relative;
+  height: 100vh; /* Full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
 
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Keeps aspect ratio and covers area */
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
             line-height: 1.2;
@@ -172,7 +203,9 @@
 
         /* About Section */
         .about {
+            width: 100%;
             background: white;
+            align-items: center;
             border-radius: 20px;
             padding: 4rem;
             margin: 3rem 0;
@@ -371,7 +404,7 @@
 
         /* Contact Section */
         .contact {
-            background: white;
+            background: black;
             border-radius: 20px;
             padding: 4rem;
             margin: 3rem 0;
