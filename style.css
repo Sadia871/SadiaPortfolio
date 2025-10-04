@@ -192,13 +192,18 @@ section {
 
 /* About Section */
 .about {
-    background: rgba(30, 41, 59, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:white;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 4rem;
-    margin: 3rem 0;
-    box-shadow: 0 0 30px rgba(236, 72, 153, 0.1);
+    /* margin: 3rem 0; */
+    box-shadow: 0 0 30px rgba(6, 5, 5, 0.95);
     backdrop-filter: blur(15px);
+     display: grid;
+  
+  max-width: 1400px;
+ 
+    animation: slideInLeft 1s ease;
 }
 
 .about-content {
@@ -211,7 +216,7 @@ section {
 .about-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #cbd5e1;
+    color: #040608ff;
 }
 
 .about-text p {
@@ -220,6 +225,7 @@ section {
 
 .about-image {
     width: 100%;
+    border: 3px solid #06b6d4 ;
     border-radius: 15px;
     box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15);
 }
@@ -229,7 +235,10 @@ section {
     background: white;
     border-radius: 20px;
     padding: 4rem;
-    margin: 3rem 0;
+    
+          display: grid;
+   max-width: 1500px;
+  
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -278,7 +287,9 @@ section {
     border-radius: 20px;
     padding: 4rem;
     margin: 3rem 0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+     display: grid;
+   max-width: 1500px;
+   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .projects-grid {
@@ -364,6 +375,8 @@ section {
 .motivation {
     background: linear-gradient(135deg, #06b6d4, #ec4899);
     color: white;
+    display: grid;
+    max-width: 1500px;
     border-radius: 20px;
     padding: 4rem;
     margin: 3rem 0;
@@ -393,45 +406,121 @@ section {
 }
 
 /* Contact Section */
-.contact {
-    background: linear-gradient(90deg, #06b6d4, #ec4899);
-    border-radius: 20px;
-    padding: 4rem;
-    margin: 3rem 0;
-    text-align: center;
+.footer {
+  background: linear-gradient(90deg, #06b6d4, #ec4899);
+  color: #f1f5f9;
+  padding: 3rem 2rem 1.5rem;
+  border-radius: 20px 20px 0 0;
 }
 
-.contact p {
-    color: #f1f5f9;
-    font-size: 1.1rem;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
+.footer-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
 }
 
-.contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    background: #06b6d4;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
+.footer-column p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.contact-link:hover {
-    background: #ec4899;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+.footer-column ul {
+  list-style: none;
+  padding: 0;
 }
+
+.footer-column ul li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-column ul li a {
+  color: #f1f5f9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #000;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  background: #06b6d4;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
+}
+
+.footer-links a:hover {
+  background: #ec4899;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+}
+
+/* Search Bar */
+.footer-search {
+  display: flex;
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.footer-search input {
+  border: none;
+  padding: 0.6rem 1rem;
+  flex: 1;
+  outline: none;
+  font-size: 1rem;
+}
+
+.footer-search button {
+  background: #06b6d4;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-search button:hover {
+  background: #ec4899;
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.footer-bottom .brand {
+  font-weight: 700;
+}
+
 
 /* Mobile Menu */
 .mobile-menu {
